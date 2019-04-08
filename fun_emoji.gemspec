@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Emoji from it's name. No more unreadable unicode}
   spec.description   = %q{We can use methods to get the Emoji instead of using unreadable unicode starting with &#}
-  spec.homepage      = "http://www.techenthu.in"
+  spec.homepage      = "https://github.com/srinidhi-lwt/fun_emoji"
   spec.license       = "MIT"
 
   spec.files         = ["README.md", "lib/fun_emoji.rb", "lib/fun_emoji/version.rb", "config/emoji_list.json"]

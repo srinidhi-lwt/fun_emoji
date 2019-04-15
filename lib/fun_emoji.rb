@@ -1,9 +1,10 @@
 require 'fun_emoji/version'
 require 'json'
-require 'nokogiri'
+require 'action_view'
 
 module FunEmoji
   class Index
+    include ActionView::Helpers::TagHelper
 
     attr_reader :emoji_list
 
@@ -17,8 +18,7 @@ module FunEmoji
 
       emoji_list.each do |key, value|
         self.class.send(:define_method, "#{key}") do
-          emoji_with_span_tag = Nokogiri::HTML::DocumentFragment.parse("<span class=emoji-#{key}> #{value} </span>")
-          emoji_with_span_tag.to_html
+          content_tag(:span, value, { class: "emoji-#{key}" }, false)
         end
       end
     end

@@ -1,5 +1,6 @@
 require 'fun_emoji/version'
 require 'json'
+require 'action_view'
 
 module FunEmoji
   class Index
